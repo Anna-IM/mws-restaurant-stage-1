@@ -10,6 +10,8 @@ if ('serviceWorker' in navigator) {
   console.log('Service workers are not supported.');
 }
 
+var cacheName = 'app-cache-v1';
+
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(cacheName).then(function(cache) {
@@ -29,5 +31,9 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request));
+  event.respondWith(caches.match(event.request).then(function(response){
+    if (response) return response;
+    return fetch(event.request);
+  })
+);
 });
