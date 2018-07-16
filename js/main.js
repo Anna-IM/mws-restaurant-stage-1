@@ -2,6 +2,7 @@ let restaurants,
   neighborhoods,
   cuisines
 var map
+var newMap
 var markers = []
 
 /**
@@ -162,9 +163,10 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = restaurant.name + ' Restaurant image';
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
@@ -199,7 +201,7 @@ createRestaurantHTML = (restaurant) => {
     self.markers.push(marker);
   });
 
-} 
+}
 
 //   For Google
 // addMarkersToMap = (restaurants = self.restaurants) => {
