@@ -29,10 +29,10 @@ a:hover, a:focus {
 	color: #3397db;
 	text-decoration: none;
 }
-a img{
+/*a img{
 	border: none 0px #fff;
   max-width: 100%;
-}
+}*/
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
@@ -45,17 +45,18 @@ h2 {
   font-size: 1.5em;
   letter-spacing: 1px;
 }
-#maincontent {
+/*#maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
   width: 100%;
-  /*float: left;
+  float: left;
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: 1fr;*/
+  grid-template-columns: 1fr;
   display: flex;
   flex-wrap: wrap;
-}
+}*/
+
 #footer {
   width: 100%;
   background-color: #444;
@@ -126,11 +127,11 @@ nav h1 a {
     padding-right: 10px;
 }
 /* ====================== Map ====================== */
-#map {
+/*#map {
   height: 400px;
   width: 100%;
   background-color: #ccc;
-}
+}*/
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
@@ -183,7 +184,7 @@ nav h1 a {
   flex-direction: column;
   align-content: center;
 }
-#restaurants-list .restaurant-img {
+#restaurants-list {
   background-color: #ccc;
   /*display: block;*/
   margin: 0;
@@ -231,23 +232,23 @@ nav h1 a {
   z-index: 1000;
 }
 
-#map-container{
+/*#map-container{
   width: 100%;
 }
 
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  /*height: 87%;*/
   position: fixed;
   right: 0;
   top: 80px;
-  /*width: 50%;*/
 }
 .inside #map {
   background-color: #ccc;
-  height: 100%;
-  width: 100%;
 }
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+position: relative;
+}*/
+
 .inside #footer {
   bottom: 0;
   position: absolute;
@@ -264,9 +265,9 @@ nav h1 a {
   text-align: center;
   line-height: 1.1;
 }
-#restaurant-img {
+/*#restaurant-img {
 	max-width: 100%;
-}
+}*/
 #restaurant-address {
   font-size: 1em;
   margin: 10px 0px;
@@ -336,9 +337,9 @@ nav h1 a {
         width: 100%;
     }
     /* nav, */
-    #map {
+    /*#map {
       max-width: 100%;
-    }
+    }*/
 
     #restaurant-container,
     #reviews-container {
