@@ -30,6 +30,6 @@ gulp.task('compress-image', function(){
 });
 
 const watch = require('gulp-watch');
-gulp.task('default', function() {
+    gulp.task('default', function() {
     gulp.watch('dist/images/*.jpg', ['compress-image'])
 });
